@@ -1,6 +1,6 @@
 ﻿using System.Windows.Controls;
 
-namespace DXApplication2.Modules.Views
+namespace DXApplication1.Modules.Views
 {
     public partial class ModuleView : UserControl
     {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DXApplication2.Common
+namespace DXApplication1.Common
 {
     public interface IDocumentModule
     {

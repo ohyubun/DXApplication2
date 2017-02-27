@@ -3,10 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:views="clr-namespace:DXApplication2.Modules.Views"
-             xmlns:viewModels="clr-namespace:DXApplication2.Modules.ViewModels"
+             xmlns:views="clr-namespace:DXApplication1.Modules.Views"
+             xmlns:viewModels="clr-namespace:DXApplication1.Modules.ViewModels"
              xmlns:dxmvvm="http://schemas.devexpress.com/winfx/2008/xaml/mvvm"
-             xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors" x:Class="DXApplication2.Modules.Views.ModuleView"
+             xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors" x:Class="DXApplication1.Modules.Views.ModuleView"
              mc:Ignorable="d" d:DesignHeight="500" d:DesignWidth="600"
              d:DataContext="{dxmvvm:ViewModelSource {x:Type viewModels:ModuleViewModel}}">
     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" TextBlock.FontSize="16">

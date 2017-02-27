@@ -2,18 +2,18 @@
 using DevExpress.Mvvm.ModuleInjection;
 using DevExpress.Mvvm.UI;
 using DevExpress.Xpf.Core;
-using DXApplication2.Common;
-using DXApplication2.Main.Properties;
-using DXApplication2.Main.ViewModels;
-using DXApplication2.Main.Views;
-using DXApplication2.Modules.ViewModels;
-using DXApplication2.Modules.Views;
+using DXApplication1.Common;
+using DXApplication1.Main.Properties;
+using DXApplication1.Main.ViewModels;
+using DXApplication1.Main.Views;
+using DXApplication1.Modules.ViewModels;
+using DXApplication1.Modules.Views;
 using System.ComponentModel;
 using System.Windows;
 using System;
-using AppModules = DXApplication2.Common.Modules;
+using AppModules = DXApplication1.Common.Modules;
 
-namespace DXApplication2.Main
+namespace DXApplication1.Main
 {
     public partial class App : Application
     {

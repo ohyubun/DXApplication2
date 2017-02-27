@@ -1,9 +1,9 @@
 ﻿using DevExpress.Mvvm;
 using DevExpress.Mvvm.POCO;
-using DXApplication2.Common;
+using DXApplication1.Common;
 using System;
 
-namespace DXApplication2.Modules.ViewModels
+namespace DXApplication1.Modules.ViewModels
 {
     public class ModuleViewModel : IDocumentModule, ISupportState<ModuleViewModel.Info>
     {
