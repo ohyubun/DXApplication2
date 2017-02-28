@@ -65,8 +65,8 @@ namespace DXApplication2.Main
         {
             var mainAssembly = typeof(MainViewModel).Assembly;
             var modulesAssembly = typeof(ModuleViewModel).Assembly;
-            var modulesAssembly1 = typeof(ChildViewModel1).Assembly;
-            var assemblies = new[] { mainAssembly, modulesAssembly, modulesAssembly1 };
+            //var modulesAssembly1 = typeof(ChildViewModel1).Assembly; //inherit ModuleViewModel,loading child is not necessary
+            var assemblies = new[] { mainAssembly, modulesAssembly };
             ViewModelLocator.Default = new ViewModelLocator(assemblies);
             ViewLocator.Default = new ViewLocator(assemblies);
         }
@@ -113,9 +113,11 @@ namespace DXApplication2.Main
             if (e.NewViewModelKey == null) return;
             Manager.InjectOrNavigate(Regions.Documents, e.NewViewModelKey);
         }
+
+        //remark is OK ????
         void OnDocumentsNavigation(object sender, NavigationEventArgs e)
         {
-            Manager.Navigate(Regions.Navigation, e.NewViewModelKey);
+            //Manager.Navigate(Regions.Navigation, e.NewViewModelKey);
         }
         void OnClosing(object sender, CancelEventArgs e)
         {

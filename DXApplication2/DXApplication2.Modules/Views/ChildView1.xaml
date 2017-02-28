@@ -11,7 +11,14 @@
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" TextBlock.FontSize="16">
             <TextBlock Text="Content: "/>
             <TextBox Text="{Binding Content, UpdateSourceTrigger=PropertyChanged}" Width="200"/>
-            <Button x:Name="button" Content="Button" Width="76" >
+            <Button x:Name="button" Content="Button Parent" Width="132" >
+                <dxmvvm:Interaction.Behaviors>
+                    <dxmvvm:EventToCommand EventName="Click" Command="{Binding ChangeTitleCommand}"/>
+                </dxmvvm:Interaction.Behaviors>
+            </Button>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" TextBlock.FontSize="16" Margin="0,285,0,185">
+            <Button x:Name="button2" Content="Button My" Width="102" >
                 <dxmvvm:Interaction.Behaviors>
                     <dxmvvm:EventToCommand EventName="Click" Command="{Binding ShowMessageCommand}"/>
                 </dxmvvm:Interaction.Behaviors>

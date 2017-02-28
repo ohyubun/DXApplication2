@@ -22,7 +22,7 @@ namespace DXApplication2.Modules.ViewModels
             });
         }
 
-        public ChildViewModel1()
+        public ChildViewModel1() :base()
         {
             ShowMessageCommand = new DelegateCommand(showMessage);
         }
