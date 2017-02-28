@@ -65,7 +65,8 @@ namespace DXApplication2.Main
         {
             var mainAssembly = typeof(MainViewModel).Assembly;
             var modulesAssembly = typeof(ModuleViewModel).Assembly;
-            var assemblies = new[] { mainAssembly, modulesAssembly };
+            var modulesAssembly1 = typeof(ChildViewModel1).Assembly;
+            var assemblies = new[] { mainAssembly, modulesAssembly, modulesAssembly1 };
             ViewModelLocator.Default = new ViewModelLocator(assemblies);
             ViewLocator.Default = new ViewLocator(assemblies);
         }
@@ -74,8 +75,11 @@ namespace DXApplication2.Main
             Manager.Register(Regions.MainWindow, new Module(AppModules.Main, MainViewModel.Create, typeof(MainView)));
             Manager.Register(Regions.Navigation, new Module(AppModules.Module1, () => new NavigationItem("Module1")));
             Manager.Register(Regions.Navigation, new Module(AppModules.Module2, () => new NavigationItem("Module2")));
+            Manager.Register(Regions.Navigation, new Module(AppModules.ChildView1, () => new NavigationItem("ChildView1")));
             Manager.Register(Regions.Documents, new Module(AppModules.Module1, () => ModuleViewModel.Create("Module1", "Module1 Content", _daoService, _changTitle), typeof(ModuleView)));
             Manager.Register(Regions.Documents, new Module(AppModules.Module2, () => ModuleViewModel.Create("Module2", "Module2 Content", _daoService, _changTitle), typeof(ModuleView)));
+            Manager.Register(Regions.Documents, new Module(AppModules.ChildView1, () => ChildViewModel1.Create("ChildView1", "ChildView1 Content", _daoService, _changTitle), typeof(ChildView1)));
+
         }
         protected virtual bool RestoreState()
         {
@@ -91,6 +95,7 @@ namespace DXApplication2.Main
             Manager.Inject(Regions.MainWindow, AppModules.Main);
             Manager.Inject(Regions.Navigation, AppModules.Module1);
             Manager.Inject(Regions.Navigation, AppModules.Module2);
+            Manager.Inject(Regions.Navigation, AppModules.ChildView1);
         }
         protected virtual void ConfigureNavigation()
         {

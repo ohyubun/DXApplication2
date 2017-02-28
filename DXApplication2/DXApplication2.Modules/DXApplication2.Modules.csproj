@@ -53,13 +53,21 @@
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="ViewModels\ChildViewModel1.cs" />
     <Compile Include="ViewModels\ModuleViewModel.cs" />
+    <Compile Include="Views\ChildView1.xaml.cs">
+      <DependentUpon>ChildView1.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\ModuleView.xaml.cs">
       <DependentUpon>ModuleView.xaml</DependentUpon>
     </Compile>
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
+    <Page Include="Views\ChildView1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\ModuleView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
